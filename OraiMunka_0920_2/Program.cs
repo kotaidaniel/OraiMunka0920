@@ -10,9 +10,11 @@ namespace OraiMunka_0920_2
     {
         static List<int> lista;
         static void szamBekeres() {
+            Console.WriteLine("Hány számot szeretne megadni?");
+            int listadarab = Convert.ToInt32(Console.ReadLine());
             int index = 0;
-            lista = new List<int>(); 
-            while (index < 10) {
+            lista = new List<int>(listadarab); 
+            while (index < listadarab) {
                 Console.Write("Kérem adjon megy egy számot: ");
                 int szam = Convert.ToInt32(Console.ReadLine());
                 lista.Add(szam);
