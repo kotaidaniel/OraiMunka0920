@@ -23,11 +23,15 @@ namespace OraiMunka_0920_2
         }
 
         static void szamKiiras() {
-            for (int i = 0; i < lista.Count-1; i++)
+            int index = lista[0];
+            for (int i = 1; i < lista.Count; i++)
             {
-                Console.Write(lista[i] + ", ");
+                if (lista[i] > index)
+                {
+                    index = lista[i];
+                }
             }
-            Console.WriteLine(lista[lista.Count-1]);
+            Console.Write("A lista legnagyobb száma : " + index);
         }
 
         static void Main(string[] args)
